@@ -9,6 +9,7 @@ By using this installer you will be able to start/stop a prerender instance as s
 sudo service prerender start|stop|restart
 ```
 
+![Install script running example image](http://oi61.tinypic.com/os4v8k.jpg)
 
 ## Install
 
