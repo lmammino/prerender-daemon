@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #variables
-VERSION="1.0.0"
+VERSION="1.1.1"
 SOURCE=$(dirname ${BASH_SOURCE[0]})
 INITSCRIPT="$SOURCE/prerender.init"
 SERVERSCRIPT=""
@@ -144,6 +144,7 @@ if [ -e "$SERVERSCRIPT" ]; then
 	DEFAULTSCRIPT="$NODE_PREFIX/lib/node_modules/prerender/server.js"
 	mv $DEFAULTSCRIPT "$DEFAULTSCRIPT.bak"
 	cp $SERVERSCRIPT $DEFAULTSCRIPT
+	chmod +x $DEFAULTSCRIPT;
 	echo "  ${bold}✓${normal} Server script copied to ${DEFAULTSCRIPT}" 1>&3 2>&4
 fi
 
