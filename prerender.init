@@ -23,7 +23,7 @@ GROUP="prerender"
 start() {
 	log_daemon_msg "Starting $NAME..."
 	mkdir -p $PIDDIR
-	if start-stop-daemon --background --make-pidfile --pidfile $PIDFILE -o --chuid $USER:$GROUP --start --exec "$APP_DIR/$APP_BIN" -- $APP_ARGS ; then
+	if start-stop-daemon --background --make-pidfile --pidfile $PIDFILE -o --chuid $USER:$GROUP --start --startas "$APP_DIR/$APP_BIN" -- $APP_ARGS ; then
         log_end_msg 0
     else
         log_end_msg 1
